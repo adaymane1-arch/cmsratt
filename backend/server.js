@@ -1,15 +1,19 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const dotenv = require('dotenv');
 const { connectDB } = require('./config');
 const Message = require('./models/Message');
 const authRoutes = require('./routes/auth');
+
+// Charger les variables d'environnement
+dotenv.config();
 
 // Changer au répertoire cms-ratt pour que les chemins relatifs fonctionnent
 process.chdir(path.join(__dirname, '..'));
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
