@@ -1,0 +1,16 @@
+{
+  "name": "cms-ratt-app",
+  "version": "1.0.0",
+  "description": "CMS RATT avec Backend Node.js et Frontend HTML/CSS/JS",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^9.3.3"
+  }
+}
